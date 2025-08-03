@@ -1,0 +1,38 @@
+@use "variables" as *;
+
+// SCSS Mixins
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin buttonBase {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+@mixin cardStyle {
+  padding: 2em;
+  background: $card-background;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: $mobile) { @content; }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: $tablet) { @content; }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: $desktop) { @content; }
+  }
+}
