@@ -1,0 +1,15 @@
+# Core Django and API
+Django==4.2.16
+djangorestframework==3.14.0
+
+# Database
+psycopg2-binary==2.9.9
+
+# CORS handling
+django-cors-headers==4.3.1
+
+# Environment variables
+python-dotenv==1.0.0
+
+# Static file serving
+whitenoise==6.6.0
