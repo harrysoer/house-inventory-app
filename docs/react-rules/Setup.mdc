@@ -1,0 +1,9 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+
+Use vite for reactjs setup
+
+Use React Router for routing setup and its needs for authenticated pages

@@ -1,0 +1,7 @@
+---
+globs: front-end/*
+alwaysApply: false
+---
+Use rtk-query for API requests management.
+
+Make the folder to front-end/api/

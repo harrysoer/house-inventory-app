@@ -1,0 +1,17 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+Use these rules mdc file when I mention "Plan a"
+
+Create an md doc file
+
+Include Checklists and steps
+
+Create the file under docs/plans and auto increment it starting with 0
+
+Add in the file name prefix if BE or FE scope
+
+Always make sure that when planning the concept should include if it's "react-rules" or "nest-js-rules"

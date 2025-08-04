@@ -1,0 +1,11 @@
+---
+description: 
+globs: false
+alwaysApply: false
+---
+
+Always use material-ui kit for this project
+
+Always use material-ui components for all elements
+
+Always ask we should customize existing material-ui components if needed for a feature
