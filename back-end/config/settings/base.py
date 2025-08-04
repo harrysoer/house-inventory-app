@@ -23,6 +23,7 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     "rest_framework",
+    "corsheaders",
 ]
 
 LOCAL_APPS = [
@@ -111,6 +112,11 @@ REST_FRAMEWORK = {
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.PageNumberPagination",
     "PAGE_SIZE": 20,
 }
+
+# Ensure logs directory exists
+import os
+logs_dir = BASE_DIR / "logs"
+os.makedirs(logs_dir, exist_ok=True)
 
 # Logging Configuration
 LOGGING = {

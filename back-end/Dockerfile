@@ -28,8 +28,9 @@ RUN pip install --upgrade pip && \
 # Copy project
 COPY . .
 
-# Create necessary directories
+# Create necessary directories with proper permissions
 RUN mkdir -p logs staticfiles media && \
+    chmod 755 logs && \
     chown -R appuser:appgroup /app
 
 # Switch to non-root user

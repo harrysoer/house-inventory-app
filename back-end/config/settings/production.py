@@ -51,7 +51,7 @@ CACHES = {
 CORS_ALLOWED_ORIGINS = os.getenv('CORS_ALLOWED_ORIGINS', '').split(',')
 CORS_ALLOW_ALL_ORIGINS = False  # Strict CORS in production
 
-# Production-specific middleware
+# Production-specific middleware (CORS is already in base INSTALLED_APPS)
 MIDDLEWARE = [
     "corsheaders.middleware.CorsMiddleware",
     "django.middleware.security.SecurityMiddleware",
@@ -85,6 +85,11 @@ EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True').lower() == 'true'
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
 DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'noreply@yourdomain.com')
+
+# Ensure logs directory exists
+import os
+logs_dir = "/app/logs"
+os.makedirs(logs_dir, exist_ok=True)
 
 # Logging for production
 LOGGING = {

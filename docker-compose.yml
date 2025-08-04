@@ -1,5 +1,4 @@
 # 🐳 Development Docker Compose for House Inventory App
-version: '3.8'
 
 services:
   # 🗄️ PostgreSQL Database
